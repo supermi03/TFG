@@ -1,0 +1,45 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #d87d37;
+}
+
+.tabla-perfil {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .tabla-perfil th, .tabla-perfil td {
+        padding: 10px;
+        text-align: left; 
+        border: 1px solid #ddd;
+    }
+
+    .tabla-perfil th {
+        background-color: #d87d37;
+        color: white;
+    }
+
+    .tabla-perfil tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .tabla-perfil tr:hover {
+        background-color: #f1f1f1;
+    }

@@ -1,0 +1,104 @@
+﻿
+#citas-container {
+    margin: 200px;
+    padding: 100px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+    /* Título del contenedor de citas */
+    #citas-container h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Estilo de las citas individuales */
+.cita {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+    /* Estilo de las citas al pasar el mouse sobre ellas */
+    .cita:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Título de la cita */
+    .cita .cita-titulo {
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Detalles de la cita (fecha, motivo, estado) */
+    .cita .cita-detalles {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+        /* Detalles de la cita - Estado */
+        .cita .cita-detalles .estado {
+            font-weight: bold;
+            color: #007BFF; /* Azul para el estado */
+        }
+
+    /* Botones de acción para las citas (Editar, Eliminar) */
+    .cita .acciones {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+        .cita .acciones button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilo para el botón de editar */
+        .cita .acciones .editar {
+            background-color: #28a745;
+            color: white;
+        }
+
+            .cita .acciones .editar:hover {
+                background-color: #218838;
+            }
+
+        /* Estilo para el botón de eliminar */
+        .cita .acciones .eliminar {
+            background-color: #dc3545;
+            color: white;
+        }
+
+            .cita .acciones .eliminar:hover {
+                background-color: #c82333;
+            }
+
+/* Si no hay citas disponibles, mensaje */
+#citas-container .no-citas {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    font-weight: 400;
+    margin-top: 20px;
+}
+

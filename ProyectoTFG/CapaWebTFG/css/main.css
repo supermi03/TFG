@@ -1,0 +1,28 @@
+﻿.cuadrados {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+.cuadrado {
+    background-color: #F4A261;
+    padding: 70px;
+    border-radius: 15px;
+    width: 400px;
+}
+
+.cuadrado:hover {
+    border: 3px solid black;
+}
+
+.cuadrado h3 {
+    color: #fef4db;
+}
+
+.cuadrado p {
+    color: #fef4db;
+}
+.imagen{
+    width: 200px;
+    height: 200px;
+}
