@@ -246,6 +246,11 @@ namespace CapaWebTFG.Services
         }
 
 
+
+
+
+
+
         //[WebMethod]
         //[ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
         //public string ActualizarRutina(int rutinaId, string nombre, string descripcion, List<Entrenamiento_Ejercicios> ejercicios)
