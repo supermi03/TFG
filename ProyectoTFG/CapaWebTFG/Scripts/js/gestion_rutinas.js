@@ -68,7 +68,7 @@
     function obtenerEjercicios() {
         $.ajax({
             type: "GET",
-            url: "/Services/ServicioRutina.asmx/ObtenerEjercicios",  // URL del servicio para obtener ejercicios
+            url: "../Services/ServicioRutina.asmx/ObtenerEjercicios",
             dataType: "json",
             success: function (response) {
                 if (response.success) {
