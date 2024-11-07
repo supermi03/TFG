@@ -95,31 +95,46 @@ namespace CapaWebTFG.Services
         [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
         public string ObtenerEjercicios(int pageNumber = 1, int pageSize = 10)
         {
-        try
-        {
-            using (var context = new Contexto())
+            try
             {
-                // Implementar paginación
-                var ejerciciosQuery = context.Ejercicios
-                    .OrderBy(e => e.Nombre) // O cualquier criterio que desees
-                    .Skip((pageNumber - 1) * pageSize) // Saltar los ejercicios de las páginas anteriores
-                    .Take(pageSize); // Limitar la cantidad de ejercicios a la página actual
-
-                var ejercicios = ejerciciosQuery.Select(e => new
+                using (var context = new Contexto())
                 {
-                    e.Ejercicios_Id,
-                    e.Nombre
-                }).ToList();
+                    // Total de ejercicios para calcular el número total de páginas
+                    int totalEjercicios = context.Ejercicios.Count();
 
-                return JsonConvert.SerializeObject(new { success = true, ejercicios });
+                    // Implementar paginación
+                    var ejerciciosQuery = context.Ejercicios
+                        .OrderBy(e => e.Nombre)
+                        .Skip((pageNumber - 1) * pageSize)
+                        .Take(pageSize);
+
+                    var ejercicios = ejerciciosQuery.Select(e => new
+                    {
+                        e.Ejercicios_Id,
+                        e.Nombre
+                    }).ToList();
+
+                    return JsonConvert.SerializeObject(new
+                    {
+                        success = true,
+                        ejercicios,
+                        totalEjercicios // Enviar el total de ejercicios
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Registrar el error si tienes un sistema de logging
+                // LogError(ex); // Ejemplo de función para registrar el error (opcional)
+
+                return JsonConvert.SerializeObject(new
+                {
+                    success = false,
+                    message = "Ocurrió un error al obtener los ejercicios. Inténtalo nuevamente."
+                });
             }
         }
-        catch (Exception ex)
-        {
-            // En caso de error, registrar el error y devolver un mensaje genérico
-            return JsonConvert.SerializeObject(new { success = false, message = "Ocurrió un error al obtener los ejercicios." });
-        }
-}
+
         [WebMethod]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
         public string ObtenerPersonas()

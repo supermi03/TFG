@@ -17,6 +17,8 @@ $(document).ready(function () {
             dataType: "json",
             success: function (response) {
                 // Intenta parsear la cadena JSON
+                sessionStorage.setItem("UserId", response.userId); // Guarda el userId
+
                 var data;
                 try {
                     data = JSON.parse(response.d); // Analiza la cadena JSON
@@ -26,6 +28,7 @@ $(document).ready(function () {
                 }
 
                 if (data.success) {
+                    sessionStorage.setItem("UserId", data.userId); 
                     console.log("Redirigiendo a la página principal...");
                     window.location.href = "../views/mainUser.aspx"; // Redirigir tras inicio de sesión
                 } else {

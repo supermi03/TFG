@@ -42,10 +42,9 @@ namespace CapaWebTFG.Services
                     FormsAuthentication.SetAuthCookie(persona.Persona_Id.ToString(), recordarme);
 
                     // Almacenar UserId como int en la sesión
-                    HttpContext.Current.Session["UserName"] = persona.Nombre;
                     HttpContext.Current.Session["UserId"] = persona.Persona_Id;
 
-                    return JsonConvert.SerializeObject(new { success = true, message = "Inicio de sesión exitoso.", persona = persona.Nombre });
+                    return JsonConvert.SerializeObject(new { success = true, message = "Inicio de sesión exitoso.", userId = persona.Persona_Id });
                 }
             }
             catch (Exception ex)
