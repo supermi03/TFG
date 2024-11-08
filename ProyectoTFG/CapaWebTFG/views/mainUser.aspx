@@ -12,16 +12,9 @@
     <link rel="stylesheet" href="../css/user.css" />
 
     <nav id="navUser">
-        <ul class="nav logo">
-            <li class="nav-item">
-                <a class="nav" aria-current="page" href="#"></a>
-            </li>
-            <li class="nav-item" runat="server" id="welcomeMessage">
-            <!-- Aquí se insertará el mensaje de bienvenida -->
-            <asp:Literal ID="litWelcomeMessage" runat="server" />
-            </li>
+        <a href="../Default.aspx"<ul class="nav logo">
 
-        </ul>
+        </ul></a>
         <ul class="nav menu">
             <li class="nav-item">
                 <a class="nav" aria-current="page" href="../views/Rutinas.aspx">Rutinas</a>

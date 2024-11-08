@@ -27,6 +27,8 @@
                     <tr><td>Fecha de Registro</td><td>${responseData.data.FechaRegistro}</td></tr>
                     <tr><td>Teléfono</td><td>${responseData.data.Telefono}</td></tr>
                     <tr><td>Dirección</td><td>${responseData.data.Direccion}</td></tr>
+                    <tr><td>Restablece tu contraseña aquí</td></tr>
+
                 `);
             } else {
                 alert("Error: " + responseData.message);

@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="../css/user.css" />
 
     <nav>
-        <ul class="nav logo">
-            <li class="nav-item">
-                <a class="nav" aria-current="page" href="#"></a>
-            </li>
-        </ul>
+        <a href="../Default.aspx"<ul class="nav logo">
+
+        </ul></a>
         <ul class="nav menu">
             <li class="nav-item">
                 <a class="nav" aria-current="page" href="../Default.aspx">Inicio</a>
